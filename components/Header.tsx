@@ -1,14 +1,11 @@
 'use client';
 
-import { useAppDispatch } from '../app/lib/hooks';
-import { logout } from '../app/lib/features/authSlice';
-import { useRouter } from 'next/navigation';
 import { Bell } from 'lucide-react';
 import Image from 'next/image';
 import img from '../public/images/Flag_of_Egypt.svg.png'
 import avatarimg from '../public/images/girl.webp'
 export default function Header() {
-  const dispatch = useAppDispatch();
+
 
 
   return (

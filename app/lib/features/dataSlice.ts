@@ -1,8 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchTableData, fetchChartData } from '../mockupApi';
 
+interface TableItem {
+  id: number;
+  name: string;
+  price: number;
+}
 interface DataState {
-  tableData: any[];
+  tableData: TableItem[];
   chartData: { name: string; value: number }[];
   loading: boolean;
   error: string | null;
@@ -13,6 +18,7 @@ const initialState: DataState = {
   loading: false,
   error: null,
 };
+
 
 export const getTableData = createAsyncThunk('data/getTableData', async () => {
   const response = await fetchTableData();
