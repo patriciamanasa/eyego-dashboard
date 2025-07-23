@@ -9,7 +9,6 @@ import img from '../public/images/Flag_of_Egypt.svg.png'
 import avatarimg from '../public/images/girl.webp'
 export default function Header() {
   const dispatch = useAppDispatch();
-  const router = useRouter();
 
 
   return (

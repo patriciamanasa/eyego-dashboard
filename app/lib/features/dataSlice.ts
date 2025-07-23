@@ -7,7 +7,6 @@ interface DataState {
   loading: boolean;
   error: string | null;
 }
-
 const initialState: DataState = {
   tableData: [],
   chartData: [],

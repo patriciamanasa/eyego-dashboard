@@ -12,6 +12,7 @@ import {
 } from 'recharts';
 import { useAppSelector } from '../app/lib/hooks';
 
+
 const fallbackData = [
   { name: 'Laptop', price: 1200 },
   { name: 'Smartphone', price: 800 },
@@ -20,7 +21,14 @@ const fallbackData = [
   { name: 'Keyboard', price: 100 },
 ];
 
-const renderCustomAxisTick = ({ x, y, payload }: any) => (
+interface CustomTickProps {
+  x: number;
+  y: number;
+  payload: {
+    value: string;
+  };
+}
+const renderCustomAxisTick = ({ x, y, payload }: CustomTickProps) => (
   <text x={x} y={y + 15} textAnchor="middle" fill="#666" fontSize={12}>
     {payload.value}
   </text>

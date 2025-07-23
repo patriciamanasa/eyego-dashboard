@@ -1,11 +1,14 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 
-export default function Slider({ selected, setSelected }: any) {
+interface Props {
+  selected: 'dashboard' | 'chart' | 'table';
+  setSelected: (value: 'dashboard' | 'chart' | 'table') => void;
+}
+export default function Slider({ selected, setSelected }: Props) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
